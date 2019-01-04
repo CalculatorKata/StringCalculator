@@ -11,8 +11,6 @@ namespace StringCalculator
         static void Main(string[] args)
         {
             
-
-
         }
 
         
@@ -35,7 +33,29 @@ namespace StringCalculator
                     result = outPut;
             }
 
-            return result;
+            if (result==-1)
+            {
+                List<string> stringNumbers;
+                stringNumbers = Input.Split(',').ToList<string>();
+                int numConverted = 0;
+                int outPut = 0;
+
+                foreach (var item in stringNumbers)
+                {
+                    if (int.TryParse(item, out outPut))
+                    {
+                        numConverted += outPut;
+                    }
+                    else
+                    {
+                        return result;
+                    }
+                }
+
+                result = numConverted;
+
+            }
+                return result;
         }
     }
 }

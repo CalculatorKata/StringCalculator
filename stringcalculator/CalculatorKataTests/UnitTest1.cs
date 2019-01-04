@@ -20,5 +20,13 @@ namespace CalculatorKataTests
             CalculatorKata calculatorKata = new CalculatorKata();
             Assert.AreEqual(calculatorKata.Add("0"), 0);
         }
+
+        [TestMethod]
+        public void Step3()
+        {
+            CalculatorKata calculatorKata = new CalculatorKata();
+            Assert.AreEqual(calculatorKata.Add("1,3"), 4);
+        }
+
     }
 }
